@@ -5,6 +5,19 @@ import * as S from  '../dados/style';
 
 export default function Books() {
 const [book, setBook] = useState(books)
+const [search, setSearch] = useState('')
+
+    function handleChange(e) {
+        setSearch(e.target.value)
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        setBook(books.filter(book => book.Nome.toLowerCase().includes(search.toLowerCase())))
+    }
+
+   
+
     return (
         <S.ContainerBooks>
             <S.GlobalStyle />
@@ -22,6 +35,9 @@ const [book, setBook] = useState(books)
                 </S.List>
             </S.Menu>            
             <S.Ttlb>Livros de Hary Potter</S.Ttlb>
+            <S.Form onSubmit={handleSubmit}>
+                <S.Input type="text" placeholder="Pesquisar" value={search} onChange={handleChange} />                
+            </S.Form>            
             <S.Sectb>
             {book.map((item, index) => (
                 <S.BoxBooks key={index}>
@@ -32,4 +48,4 @@ const [book, setBook] = useState(books)
             </S.Sectb>                        
         </S.ContainerBooks>
     )
-}
+}                

@@ -124,3 +124,22 @@ export const ListItem = styled.li`
     color: blueviolet;
     transform: scale(1.4);
   }`
+
+export const Form = styled.form`
+display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+  list-style: none;
+  `;
+
+  export const Input = styled.input`
+  height: 5vh;
+  width: 30%;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 3vh;
+  `;
+  
+

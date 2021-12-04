@@ -5,17 +5,16 @@ import * as S from  './style'
 
 export function Main() {
 
-    const [hp, setHp] = useState([])
+    const [hp, setHp] = useState([])    
 
     useEffect(() => {
     api.get()
     // console.log(api.get())
     .then(response => setHp(response.data))
-    }, [])
-
-    
+    }, [])      
+        
     return (            
-        <S.BoxFather>
+        <S.BoxFather>          
           {hp.slice(0,25).map((item, index) => (
             <S.BoxSon key={index}>
               <S.BoxImg>
