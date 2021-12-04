@@ -3,7 +3,8 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "hp-gatsby",
   },
-  plugins: ["gatsby-plugin-styled-components",
+  plugins: ["gatsby-plugin-styled-components"],
+  plugins: [ 
   {
     resolve: "gatsby-source-graphql",
     options: {      
