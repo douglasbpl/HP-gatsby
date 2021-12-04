@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import img from "../../images/casashp.gif";
 
-
-
 export const BoxImg = styled.div`
   height: 50%;
   width: 100%;

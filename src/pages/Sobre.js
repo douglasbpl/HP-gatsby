@@ -3,10 +3,6 @@ import { Link } from 'gatsby'
 import * as S from  '../dados/style';
 
 
-
-
-
-
 export default function Sobre() {
     return (
         <S.ContainerSo>
